@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/check', async (req, res) => {
-    const url = req.query.url;
+    let url = req.query.url;
     if (!/^https?:\/\//i.test(url)) {
         url = `http://${url}`;
     }
