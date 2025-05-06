@@ -4,6 +4,9 @@ const app = express();
 
 app.get('/check', async (req, res) => {
     const url = req.query.url;
+    if (!/^https?:\/\//i.test(url)) {
+        url =  `http://${url}`;
+        
     if (!url) {
         return res.status(400).json({ error: "Missing 'url' query parameter" });
     }
