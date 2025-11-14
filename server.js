@@ -127,7 +127,7 @@ app.get('/check', async (req, res) => {
     }
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8101;
 app.listen(port, () => {
     console.log(`Obsy Puppeteer tool running on http://localhost:${port}`);
 });

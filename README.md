@@ -22,7 +22,7 @@ It runs a headless Chromium instance inside a Docker container, loads a web page
 
 ```bash
 docker build -t obsy-puppeteer .
-docker run -p 3000:3000 obsy-puppeteer
+docker run -p 8101:8101 obsy-puppeteer
 ```
 or
 ```bash
@@ -34,7 +34,7 @@ docker compose up --build
 ### Example cURL Test
 
 ```bash
-curl "http://localhost:3000/check?url=https://example.com"
+curl "http://localhost:8101/check?url=https://example.com"
 ```
 
 ### Example Response
